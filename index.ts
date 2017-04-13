@@ -25,11 +25,11 @@ export { TranslatePipe } from './src/translate.pipe';
         TranslatePipe
     ]
 })
-export class Angular2TranslateJsonModule {
+export class AngularTranslateJsonModule {
 
     public static forRoot(): ModuleWithProviders {
         return {
-            ngModule: Angular2TranslateJsonModule,
+            ngModule: AngularTranslateJsonModule,
             providers: [
                 TranslateService
             ]

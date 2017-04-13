@@ -8,13 +8,13 @@ It's built to support latest angular version, with a friendly to use api.
 ##### 1. Define the module and configurations
 ```typescript
 // Imports
-import { Angular2TranslateJsonModule, TranslateService } from 'angular-translate-json';
+import { AngularTranslateJsonModule, TranslateService } from 'angular-translate-json';
 
 
 // Import it
 @NgModule({
     imports: [
-        Angular2TranslateJsonModule.forRoot(),
+        AngularTranslateJsonModule.forRoot(),
     ]
 })
 class MyAngularModule {
