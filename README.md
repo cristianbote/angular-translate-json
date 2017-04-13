@@ -1,0 +1,1 @@
+# Angular(latest) Translate Json

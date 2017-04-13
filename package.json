@@ -1,0 +1,20 @@
+{
+  "name": "angular2-translate-json",
+  "version": "0.2.3",
+  "license": "MIT",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "src",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/core": "^4.0.2",
+    "@angular/http": "^4.0.2",
+    "rxjs": "^5.3.0",
+    "zone.js": "^0.8.5"
+  }
+}
