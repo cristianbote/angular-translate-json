@@ -48,8 +48,8 @@ Now, we're ready to use inside our components.
     template: `
         <div class="page">
             <div class="title" translate="PAGE_TITLE"></div>
-            <div class="greet" translate="HELLO"></div>
-            <div class="greet" translate="HELLO_USER" [translateValues]="userData"></div>
+            <div class="greet" translate="COMMON.HELLO"></div>
+            <div class="greet" translate="COMMON.HELLO_USER" [translateValues]="userData"></div>
         </div>
     `
 })
