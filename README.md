@@ -1,5 +1,7 @@
-# Angular(latest) Translate Json
-Inspired by https://github.com/angular-translate/angular-translate
+# Angular Translate Json
+Translations module for latest version of angular.
+
+*Inspired by https://github.com/angular-translate/angular-translate*
 
 It's built to support latest angular version, with a friendly to use api.
 
@@ -59,3 +61,38 @@ class MyComponent {
     }
 }
 ```
+
+##### 4. More options to use it
+You could either use it as a atttribute(directive) or pipe, or simply by calling the service directly.
+##### Directive
+```html
+<div class="greet" translate="COMMON.HELLO"></div>
+```
+##### Pipe or filter
+```html
+<div class="greet">{{'COMMON.HELLO' | translate}}</div>
+```
+##### Using the service
+```typescript
+import { TranslateService } from 'angular-translate-json';
+
+@Component({
+    template: `{{myNameIs}} {{name}}`
+})
+class NameBadgeComponent {
+    
+    myNameIs = '';
+    name = 'John Snow';
+    
+    constructor( private translateService: TranslateService ) {
+        translateService.getTranslation('COMMON.HELLO')
+            .subscribe(res => {
+                this.myNameIs = res;
+            });
+    }
+    
+}
+```
+
+## Feedback
+Let me know if there's something broken and I'll be more than happy to address it.
