@@ -1,9 +1,15 @@
 # Angular Translate Json
-Translations module for latest version of angular.
+Translations module for latest version of angular. It's built to support latest angular version, with a friendly to use api.
 
-*Inspired by https://github.com/angular-translate/angular-translate*
+> *Inspired by https://github.com/angular-translate/angular-translate*
 
-It's built to support latest angular version, with a friendly to use api.
+[![npm version](https://badge.fury.io/js/angular-translate-json.svg)](https://badge.fury.io/js/angular-translate-json)
+
+## How to get it
+It's up on npm, so you can do:
+```bash
+npm install --save angular-translate-json
+```
 
 ## How it works
 

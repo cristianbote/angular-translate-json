@@ -10,11 +10,11 @@
     "README.md"
   ],
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "@angular/core": "^4.0.2",
     "@angular/http": "^4.0.2",
     "rxjs": "^5.3.0",
     "zone.js": "^0.8.5"
-  }
+  },
+  "devDependencies": {}
 }
