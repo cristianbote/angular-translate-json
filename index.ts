@@ -27,10 +27,12 @@ export { TranslatePipe } from './src/translate.pipe';
 })
 export class AngularTranslateJsonModule {
 
-    public static forRoot(): ModuleWithProviders {
+    public static forRoot(config = null, values = null): ModuleWithProviders {
         return {
             ngModule: AngularTranslateJsonModule,
             providers: [
+                { provide: "CONFIG", useValue: config },
+                { provide: "VALUES", useValue: values },
                 TranslateService
             ]
         }

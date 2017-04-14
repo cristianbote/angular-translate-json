@@ -1,14 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Http } from '@angular/http';
+import 'rxjs/add/operator/publishReplay';
 
 @Injectable()
 export class TranslateService {
-
-    private config = {
-        path: '',
-        locale: ''
-    };
 
     private httpObservable;
     private cache;
@@ -16,8 +12,26 @@ export class TranslateService {
     /**
      * Translation service
      * @param {Http} http
+     * @param {object} [config]
+     * @param {object} [values]
      */
-    constructor( private http: Http ) {}
+    constructor(
+        private http: Http,
+        @Inject('CONFIG') private config,
+        @Inject('VALUES') private values ) {
+
+        // Default configuration
+        if (!config) {
+            this.config = {
+                path: '',
+                locale: ''
+            };
+        }
+
+        if (!!values) {
+            this.cache = values;
+        }
+    }
 
     /**
      * Returns the url for translation files
@@ -103,7 +117,7 @@ export class TranslateService {
             let url = this.getTranslationFileUrl();
 
             // Cache the observable
-            this.httpObservable = this.httpObservable || this.http.get(url).share();
+            this.httpObservable = this.httpObservable || this.http.get(url).publishReplay(1).refCount();
 
             // Subscribe to it
             this.httpObservable.subscribe((res) => {

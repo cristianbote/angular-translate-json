@@ -22,14 +22,20 @@ import { AngularTranslateJsonModule, TranslateService } from 'angular-translate-
 // Import it
 @NgModule({
     imports: [
-        AngularTranslateJsonModule.forRoot(),
+        AngularTranslateJsonModule.forRoot(
+            // You can either define the settings  here
+            {
+                locale: 'en',
+                path: 'my/path/to/translations'
+            }
+        ),
     ]
 })
 class MyAngularModule {
     
     constructor( private translateService: TranslateService ) {
         
-        // Set the translations configurations
+        // Or here
         translateService.setConfig({
             locale: 'en',
             path: 'my/path/to/translations'

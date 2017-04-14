@@ -9,12 +9,34 @@
     "package.json",
     "README.md"
   ],
-  "scripts": {},
+  "scripts": {
+    "test": "karma start"
+  },
   "dependencies": {
+    "@angular/common": "^4.0.2",
+    "@angular/compiler": "^4.0.2",
     "@angular/core": "^4.0.2",
     "@angular/http": "^4.0.2",
+    "@angular/platform-browser": "^4.0.2",
+    "@angular/platform-browser-dynamic": "^4.0.2",
     "rxjs": "^5.3.0",
     "zone.js": "^0.8.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@angular/platform-browser": "^4.0.2",
+    "@types/jasmine": "^2.5.47",
+    "@types/node": "^7.0.12",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.1.2",
+    "core-js": "^2.4.1",
+    "jasmine": "^2.5.3",
+    "karma": "^1.6.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.31",
+    "karma-webpack": "^2.0.3",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.3"
+  }
 }
