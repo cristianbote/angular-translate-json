@@ -3,7 +3,7 @@ Translations module for latest version of angular. It's built to support latest 
 
 > *Inspired by https://github.com/angular-translate/angular-translate*
 
-[![npm version](https://badge.fury.io/js/angular-translate-json.svg)](https://badge.fury.io/js/angular-translate-json)
+[![npm version](https://badge.fury.io/js/angular-translate-json.svg)](https://badge.fury.io/js/angular-translate-json) [![Build Status](https://travis-ci.org/cristianbote/angular-translate-json.svg?branch=master)](https://travis-ci.org/cristianbote/angular-translate-json)
 
 ## How to get it
 It's up on npm, so you can do:
